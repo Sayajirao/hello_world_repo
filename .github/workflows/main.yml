@@ -23,4 +23,4 @@ jobs:
         python -m pip install --upgrade pip
         
     - name: Run Hello World App
-      run: python app.py
+      run: python python-app/app.py
