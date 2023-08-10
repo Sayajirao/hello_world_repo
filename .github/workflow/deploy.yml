@@ -1,4 +1,4 @@
-name: Deploy Python App
+name: Python Hello World Deployment
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
+    - name: Checkout Repository
       uses: actions/checkout@v2
 
     - name: Set up Python
@@ -18,10 +18,10 @@ jobs:
       with:
         python-version: 3.x
 
-    - name: Install dependencies
+    - name: Install Dependencies
       run: |
-        cd python-app
-        pip install -r requirements.txt
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt  # If you have any dependencies
 
-    - name: Run Python app
-      run: python python-app/app.py
+    - name: Run Hello World App
+      run: python app.py
