@@ -23,4 +23,4 @@ jobs:
         python -m pip install --upgrade pip
         
     - name: Run Hello World App
-      run: python python-app/app.py
+      run: python /home/ubuntu/hello_world_repo/python-app/app.py
